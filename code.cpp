@@ -1,5 +1,6 @@
 // COMSC-210 | Lab 11 | Fahad Fawad Ahmad
 // IDE used: Visual Studio
+//Program stores members of a game in a game library, asks user input to populate, then displays
 #include <iostream>
 #include <string>
 using namespace std;
