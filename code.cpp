@@ -26,14 +26,14 @@ void displayGame(Game *);
 
 int main() {
     Game * gameLibrary = new Game[NR_GAMES];
-    cout << "test12" << endl;
+    cout << "test123" << endl;
 
     for (int i = 0; i < NR_GAMES; i++) {
         inputGame(&gameLibrary[i]);
     }
 
     for (int i = 0; i < NR_GAMES; i++) {
-        displayGame(&gameLibrary[i])
+        displayGame(&gameLibrary[i]);
     }
 
     delete [] gameLibrary;
@@ -56,9 +56,10 @@ void inputGame(Game * gLibrary) {
 
     gLibrary -> reviews = new string[NR_REVIEWS];
     cout << "Enter " << NR_REVIEWS << " reviews: " << endl;
+    cin.ignore();
     for (int i = 0; i < NR_REVIEWS; i++) {
         cout << "Enter review " << i + 1 << endl;
-         getline(cin, gLibrary->reviews[i]);
+        getline(cin, gLibrary->reviews[i]);
     }
 
     cout << endl;
