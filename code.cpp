@@ -14,21 +14,25 @@ struct Game {
     int totalPlays;
     string * reviews;
 
-    ~Game() {
-        if (reviews)
-            delete [] reviews;
-        reviews = nullptr;
-    }
+   // ~Game() {
+       // if (reviews)
+        //    delete [] reviews;
+       // reviews = nullptr;
+   // }
 };
 
 void inputGame(Game *);
 
 int main() {
     Game * gameLibrary = new Game[NR_GAMES];
+    cout << "test" << endl;
 
     for (int i = 0; i < NR_GAMES; i++) {
         inputGame(&gameLibrary[i]);
     }
+
+    delete [] gameLibrary;
+    return 0;
 }
 
 void inputGame(Game * gLibrary) {
