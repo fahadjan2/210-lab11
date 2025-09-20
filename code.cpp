@@ -1,6 +1,7 @@
 // COMSC-210 | Lab 11 | Fahad Fawad Ahmad
 // IDE used: Visual Studio
 #include <iostream>
+#include <string>
 using namespace std;
 
 const int NR_GAMES = 3; //The number of games in the library
@@ -31,7 +32,7 @@ int main() {
 }
 
 void inputGame(Game * gLibrary) {
-    int num = 1;
+    static int num = 1;
     cout << "Enter info for game " << num << endl;
     
     cout << "Title: ";
@@ -45,8 +46,9 @@ void inputGame(Game * gLibrary) {
 
     cout << "Enter " << NR_REVIEWS << " reviews: " << endl;
     for (int i = 0; i < NR_REVIEWS; i++) {
-        cout << "Enter review " << i << endl;
+        cout << "Enter review " << i + 1 << endl;
         cin >> gLibrary->reviews[i];
-        cout << endl;
     }
+
+    num++;
 }
